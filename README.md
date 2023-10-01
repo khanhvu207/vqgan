@@ -22,23 +22,17 @@
     </div>
 </div>
 
-<details open="open" style='padding: 10px; border-radius:5px 30px 30px 5px; border-style: solid; border-width: 1px;'>
-  <summary>Table of Contents</summary>
-  <ol>
-    <li>
-      <a href="#introduction">Introduction</a>
-    </li>
-    <li>
-      <a href="#installation">Installation</a>
-    </li>
-    <li>
-      <a href="#training">Training instruction</a>
-    </li>
-    <li>
-      <a href="#insights">Insights</a>
-    </li>
-  </ol>
-</details>
+<div style="border: 1px solid #ccc; border-radius: 5px; padding: 10px;">
+  <details open="open">
+    <summary>Table of Contents</summary>
+    <ol>
+      <li><a href="#introduction">Introduction</a></li>
+      <li><a href="#installation">Installation</a></li>
+      <li><a href="#training">Training instruction</a></li>
+      <li><a href="#insights">Insights</a></li>
+    </ol>
+  </details>
+</div>
 
 ## Introduction
 This repository feautres a concise and minimal implementation of [Taming Transformers for High-Resolution Image Synthesis](https://arxiv.org/abs/2012.09841), along with additional insights into the training dynamics of the codebook.
