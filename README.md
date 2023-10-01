@@ -111,9 +111,9 @@ To further shed light onto the codebook issue, I visualized the codebook gradien
 
 <div align="center">
     <div class="image-container">
-        <img src="assets/code_grad.png" width="400">
-        <img src="assets/grad_heatmap.png" width="320">
-        <img src="assets/code_norm.png" width="400">
+        <img src="assets/code_grad.png" width="500">
+        <img src="assets/grad_heatmap.png" width="500">
+        <img src="assets/code_norm.png" width="500">
     </div>
 </div>
 
