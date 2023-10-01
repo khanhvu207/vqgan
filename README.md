@@ -11,14 +11,14 @@
 
 <div align="center">
     <div class="image-container">
-        <img src="assets/sample00.png" width="120">
-        <img src="assets/sample01.png" width="120">
-        <img src="assets/sample02.png" width="120">
-        <img src="assets/sample03.png" width="120">
-        <img src="assets/sample04.png" width="120">
-        <img src="assets/sample05.png" width="120">
-        <img src="assets/sample06.png" width="120">
-        <img src="assets/sample07.png" width="120">
+        <img src="assets/sample00.png" width="100">
+        <img src="assets/sample01.png" width="100">
+        <img src="assets/sample02.png" width="100">
+        <img src="assets/sample03.png" width="100">
+        <img src="assets/sample04.png" width="100">
+        <img src="assets/sample05.png" width="100">
+        <img src="assets/sample06.png" width="100">
+        <img src="assets/sample07.png" width="100">
     </div>
 </div>
 
