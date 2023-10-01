@@ -10,37 +10,17 @@
 <br>
 
 <div align="center">
-    <div class="inline-block">
-        <img src="assets/sample00.png" width="100">
-    </div>
-    <div class="inline-block">
-        <img src="assets/sample01.png" width="100">
-    </div>
-    <div class="inline-block">
-        <img src="assets/sample02.png" width="100">
-    </div>
-    <div class="inline-block">
-        <img src="assets/sample03.png" width="100">
-    </div>
-    <div class="inline-block">
-        <img src="assets/sample04.png" width="100">
-    </div>
-    <div class="inline-block">
-        <img src="assets/sample05.png" width="100">
-    </div>
-    <div class="inline-block">
-        <img src="assets/sample06.png" width="100">
-    </div>
-    <div class="inline-block">
-        <img src="assets/sample07.png" width="100">
+    <div class="image-container">
+        <img src="assets/sample00.png" width="120">
+        <img src="assets/sample01.png" width="120">
+        <img src="assets/sample02.png" width="120">
+        <img src="assets/sample03.png" width="120">
+        <img src="assets/sample04.png" width="120">
+        <img src="assets/sample05.png" width="120">
+        <img src="assets/sample06.png" width="120">
+        <img src="assets/sample07.png" width="120">
     </div>
 </div>
-
-<style>
-    .inline-block {
-        display: inline-block;
-    }
-</style>
 
 <details open="open" style='padding: 10px; border-radius:5px 30px 30px 5px; border-style: solid; border-width: 1px;'>
   <summary>Table of Contents</summary>
@@ -64,7 +44,7 @@
 This repository feautres a concise and minimal implementation of [Taming Transformers for High-Resolution Image Synthesis](https://arxiv.org/abs/2012.09841), along with additional insights into the training dynamics of the codebook.
 
 <div align="center">
-<img src="assets/vqgan.png" width="500">
+<img src="assets/vqgan.png" width="600">
 </div>
 
 The first-stage model is a symmetric autoencoder equipped with non-linear attentive blocks. It undergoes training with a mixed loss consisting of an $l_1$-reconstruction loss, perceptual LPIPS loss, and patch-wise GAN loss. The second-stage model is an autoregressive Transformers model designed to capture the discrete latent bottleneck of the first-stage model.
@@ -111,10 +91,10 @@ After the training finished, run the following command to generate synthetic ima
 ```bash
 $ python sample.py --run_id=<your run_id> --config=configs/ffhq_default.yaml
 ```
-
 <div align="center">
-<img src="assets/sample_all.png" width=500>
-<figcaption> Synthetic images from FFHQ 256x256 </figcaption>
+    <div style="display: flex; flex-direction: column; align-items: center;">
+        <img src="assets/sample_all.png" width="500" alt="Synthetic images from FFHQ 256x256">
+    </div>
 </div>
 
 ## Insights
@@ -125,30 +105,20 @@ While the losses are of usual apperances, it is obvious that the original VQGAN 
 The first-stage model only leverages around 380 codes out of 1024 codes.
 
 <div align="center">
-    <div class="inline-block">
-        <img src="assets/recon_loss.png" width="400">
-    </div>
-    <div class="inline-block">
-        <img src="assets/perceptual_loss.png" width="400">
-    </div>
-    <div class="inline-block">
-        <img src="assets/disc_loss.png" width="400">
-    </div>
-    <div class="inline-block">
-        <img src="assets/codebook_usage.png" width="400">
+    <div class="image-container">
+      <img src="assets/recon_loss.png" width="400">
+      <img src="assets/perceptual_loss.png" width="400">
+      <img src="assets/disc_loss.png" width="400">
+      <img src="assets/codebook_usage.png" width="400">
     </div>
 </div>
 
 To further shed light onto the codebook issue, I visualized the codebook gradients and code norms.
 
 <div align="center">
-    <div class="inline-block">
+    <div class="image-container">
         <img src="assets/code_grad.png" width="400">
-    </div>
-    <div class="inline-block">
         <img src="assets/grad_heatmap.png" width="320">
-    </div>
-    <div class="inline-block">
         <img src="assets/code_norm.png" width="400">
     </div>
 </div>
