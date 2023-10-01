@@ -1,0 +1,49 @@
+dataset: 
+  target: Flickr30kDataModule
+encoder_decoder:
+  double_z: False
+  z_channels: 256
+  resolution: 256
+  in_channels: 3
+  out_ch: 3
+  ch: 128
+  ch_mult: [1, 1, 2, 2, 4]
+  num_res_blocks: 2
+  attn_resolutions: [16]
+  dropout: 0.0
+vector_quantization:
+  quantizer: DeepMindQuantize
+  num_codebooks: 1
+  params:
+    num_embeddings: 1024
+    embedding_dim: 256
+    commitment_cost: 0.25
+    decay: 0.97
+train:
+  loss_fn:
+    target: VQLPIPSWithDiscriminator
+    params:
+      disc_start: 900
+      codebook_weight: 1.0
+      pixelloss_weight: 1.0
+      disc_num_layers: 2
+      disc_in_channels: 3 
+      disc_factor: 1.0
+      disc_weight: 0.8
+      perceptual_weight: 1.0
+      use_actnorm: False
+      disc_conditional: False
+      disc_ndf: 64
+      disc_loss: hinge
+  img_res: 256
+  batch_size: 9
+  max_steps: 1000000
+  lr: 1e-5
+  min_lr: 1e-8
+  lr_warmup: 0.01
+  weight_decay: 0.0
+  num_workers: 4
+  gpus: 
+  - 0
+  - 1
+  - 2

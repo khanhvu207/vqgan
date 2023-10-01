@@ -1,0 +1,28 @@
+dataset: 
+  name: CIFAR10DataModule
+  variance: 0.06327039811675479
+encoder:
+  in_channels: 3
+  hidden_dim: 128
+  num_blocks: 1
+decoder:
+  hidden_dim: 128
+  num_blocks: 1
+  out_channels: 3
+vector_quantization:
+  quantizer: DeepMindQuantize
+  num_codebooks: 8
+  params:
+    num_embeddings: 512
+    embedding_dim: 64
+    commitment_cost: 0.25
+train:
+  loss_fn: Gaussian
+  batch_size: 256
+  max_steps: 15000
+  emb_loss_scale: 1.0
+  lr: 1e-3
+  min_lr: 1e-6
+  weight_decay: 0.0001
+  gpus: 
+  - 0 

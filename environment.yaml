@@ -1,0 +1,26 @@
+name: generative
+channels:
+  - pytorch
+  - nvidia
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.8.5
+  - pip
+  - pytorch=2.0.0
+  - pytorch-cuda=11.7
+  - pytorch-lightning=2.0.1
+  - torchvision=0.15
+  - wandb=0.14.2
+  - ipykernel=6.19.2
+  - matplotlib=3.7.1
+  - numpy=1.23.5
+  - fire=0.5.0
+  - omegaconf=2.3.0
+  - umap-learn=0.5.3
+  - einops=0.6.1
+  - torchview=0.2.6
+  - kaggle=1.5.13
+  - albumentations=1.3.1
+  - pip:
+    - lpips==0.1.4
